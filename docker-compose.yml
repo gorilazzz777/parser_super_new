@@ -1,0 +1,64 @@
+version: "3"
+
+volumes:
+  local_postgres_data: {}
+  local_postgres_data_backups: {}
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: NGINX_SERVER
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/src
+      - ./config/nginx:/etc/nginx/conf.d
+    depends_on:
+      - web
+    networks:
+      - appnetwork
+  web:
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    container_name: WEB
+    depends_on:
+      - db
+    volumes:
+      - ./src:/src
+      - /var/log/app:/var/log/app
+    expose:
+      - "8000"
+    links:
+      - redis
+    env_file:
+      - ./.envs/.django
+    environment:
+      - PROD=true
+    networks:
+      - appnetwork
+  db:
+    build:
+      context: .
+      dockerfile: compose/postgres/Dockerfile
+    container_name: POSTGRES_DB
+    env_file:
+      - ./.envs/.postgres
+    volumes:
+      - local_postgres_data:/var/lib/postgresql/data
+      - local_postgres_data_backups:/backups
+    command: postgres -c 'max_connections=250'
+    networks:
+      - appnetwork
+  redis:
+    image: redis:alpine
+    container_name: REDIS_DB
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass boxberrypasswOrd12
+    networks:
+      - appnetwork
+
+networks:
+  appnetwork:
+    driver: bridge

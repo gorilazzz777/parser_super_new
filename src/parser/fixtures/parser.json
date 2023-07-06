@@ -1,0 +1,867 @@
+[
+{
+  "model": "parser.service",
+  "pk": 19,
+  "fields": {
+    "date": "2022-12-16T09:03:39.881Z",
+    "name": "Boxberry",
+    "sale": false,
+    "can_add": true
+  }
+},
+{
+  "model": "parser.service",
+  "pk": 20,
+  "fields": {
+    "date": "2022-12-16T09:03:40.384Z",
+    "name": "СберЛогистика",
+    "sale": false,
+    "can_add": true
+  }
+},
+{
+  "model": "parser.service",
+  "pk": 21,
+  "fields": {
+    "date": "2022-12-16T09:03:41.272Z",
+    "name": "DPD",
+    "sale": false,
+    "can_add": true
+  }
+},
+{
+  "model": "parser.service",
+  "pk": 22,
+  "fields": {
+    "date": "2022-12-16T09:03:42.761Z",
+    "name": "СДЭК",
+    "sale": false,
+    "can_add": true
+  }
+},
+{
+  "model": "parser.service",
+  "pk": 23,
+  "fields": {
+    "date": "2022-12-16T09:03:45.984Z",
+    "name": "Почта",
+    "sale": false,
+    "can_add": true
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 85,
+  "fields": {
+    "delivery_servise": 19,
+    "name": "Boxberry",
+    "code": "4",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "api_lkp",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 86,
+  "fields": {
+    "delivery_servise": 19,
+    "name": "Boxberry",
+    "code": "4",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "billing",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 87,
+  "fields": {
+    "delivery_servise": 20,
+    "name": "СберПосылка",
+    "code": "Сберпосылка",
+    "type": 7,
+    "direction": 7,
+    "limit": 50,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "sberlogistic",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 88,
+  "fields": {
+    "delivery_servise": 20,
+    "name": "Сберпосылка",
+    "code": "sberlogistics",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "sberlogistic",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 89,
+  "fields": {
+    "delivery_servise": 20,
+    "name": "Сберкурьер",
+    "code": "sber_courier",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "sberlogistic",
+    "parsing_groups": [
+      114
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 90,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Shop",
+    "code": "PUP",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": "dpd_shop_name",
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 91,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Economy",
+    "code": "ECN",
+    "type": 7,
+    "direction": 7,
+    "limit": 60,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 92,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Economy",
+    "code": "ECN",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 93,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Shop",
+    "code": "PUP",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 94,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Standard",
+    "code": "MXO",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 95,
+  "fields": {
+    "delivery_servise": 21,
+    "name": "Optimum",
+    "code": "PCL",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "dpd",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 96,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Посылочка",
+    "code": "333",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": "cdek_box_name",
+    "parsing_model": "cdek_box",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 97,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Магистральный супер-экспресс склад-склад",
+    "code": "63",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 98,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Магистральный экспресс склад-склад",
+    "code": "62",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 100,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Экономичный экспресс склад-склад",
+    "code": "5",
+    "type": 7,
+    "direction": 7,
+    "limit": 80,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 102,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Экономичная посылка склад-дверь",
+    "code": "233",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 103,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Экономичная посылка склад-склад",
+    "code": "234",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 106,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Посылка склад-дверь",
+    "code": "137",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 107,
+  "fields": {
+    "delivery_servise": 22,
+    "name": "Посылка склад-склад",
+    "code": "136",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "cdek",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 108,
+  "fields": {
+    "delivery_servise": 23,
+    "name": "EMC",
+    "code": "7030",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "pochta",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 109,
+  "fields": {
+    "delivery_servise": 23,
+    "name": "Почта Курьер",
+    "code": "24030",
+    "type": 8,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "pochta",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 110,
+  "fields": {
+    "delivery_servise": 23,
+    "name": "Почта России",
+    "code": "4030",
+    "type": 7,
+    "direction": 7,
+    "limit": 120,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "pochta",
+    "parsing_groups": [
+      115
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      59,
+      64
+    ]
+  }
+},
+{
+  "model": "parser.deliverytariff",
+  "pk": 111,
+  "fields": {
+    "delivery_servise": 23,
+    "name": "Посылка онлайн обыкновенная",
+    "code": "23030",
+    "type": 7,
+    "direction": 8,
+    "limit": 40,
+    "in_statistic": true,
+    "in_report": true,
+    "in_parser": false,
+    "distinct_key": null,
+    "parsing_model": "pochta",
+    "parsing_groups": [
+      113
+    ],
+    "packages": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ]
+  }
+}
+]

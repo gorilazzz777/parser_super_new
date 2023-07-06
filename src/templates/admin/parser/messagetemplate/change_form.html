@@ -1,0 +1,35 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block submit_buttons_bottom %}
+    <fieldset class="module aligned collapse">
+        <h2>Возможность отправить ПУШ (для тестирования существующих шаблонов)</h2>
+        <div class="form-row field-buyer_phone">
+            <div>
+               <label class="required" for="id_phone" style="">Номер телефона:</label>
+               <input type="text" name="_phone" class="vTextField" id="id_phone">
+            </div>
+        </div>
+        <div class="form-row field-buyer_name">
+            <div>
+               <label class="required" for="id_order" style="">Номер накладой:</label>
+               <input type="text" name="_order" class="vTextField" id="id_oder">
+            </div>
+        </div>
+        <div class="form-row field-buyer_name">
+            <div>
+               <label class="required" for="id_send" style="">Текст сообщения:</label>
+               <input type="text" name="_message_text" class="vTextField" id="id_send">
+            </div>
+        </div>
+        <div class="form-row field-buyer_name">
+            <div>
+               <input type="submit" value="Отправить" class="default" name="_send">
+            </div>
+        </div>
+</fieldset>
+
+
+    {{ block.super }}
+{% endblock %}
+

@@ -1,0 +1,42 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<ul class="nav nav-tabs mb-3" role="tablist" id="jazzy-tabs">
+
+        <li class="nav-item">
+            <a class="nav-link {% if request.GET.type == 'im' %} active {% endif %}" aria-selected="true" href="/reports?type=im">
+                Интерент магазины
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link {% if request.GET.type == 'pip' %} active {% endif %}"  aria-selected="false" href="/reports?type=pip">
+                ПиП ФЛ
+            </a>
+        </li>
+</ul>
+      <div class="row" >
+        {% for report in reports %}
+            <div class="card text-center col-3 m-lg-2" style="max-width: 230px">
+              <div class="card-header">
+                {{ report_name }}
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">{{ report.month }}</h5>
+                <p class="card-text"></p>
+                <a href="https://storage.yandexcloud.net/zone-avito/{{report.key}}" class="btn btn-primary">Скачать</a>
+                {% if forloop.last %}
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="col"><button type="submit" class="btn btn-success mt-2">Обновить</button></div>
+                </form>
+                {% endif %}
+              </div>
+              <div class="card-footer text-muted">
+                дата обновления: <br> {{ report.date }}
+              </div>
+            </div>
+        {% endfor %}
+      </div>
+
+    </div>
+{% endblock %}

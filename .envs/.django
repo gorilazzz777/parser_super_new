@@ -1,0 +1,55 @@
+DB_HOST=db
+DB_PORT=5432
+DB_PASSWORD=password
+DB_USER=user
+DB_NAME=django_db
+APP_KEY=s_-aro!sw@)bob$tojdq!s61$+3s22y=dbe!b5y3!p4ch&y3k#
+
+DJANGO_ALLOWED_HOSTS=*
+
+MAIL_ADDR_FROM = "gorilazzz777@gmail.com"
+MAIL_PASSWORD = "bcvsosndfldqcwlc"
+MAIL_MSG_SUBJ = "Данные по ценам доставки конкурентов"
+MAIL_MSG_TEXT = "Добрый день!\nДанные во вложении."
+
+MA_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhbnl3aGVyZSIsImlzcyI6IlNoaXNocGFyZW5vayBWbGFkaW1pciIsIlRva2VuVHlwZSI6Im1hbnVhbCBnZW4iLCJFbnZUeXBlIjoicHJvZCIsIkNsaWVudENvZGUiOiJMS1AiLCJLaW5kIjoiQm94YmVycnlJbnRlcm5hbCJ9.RZFcBbRHuSlkrlRXWxZ2_bUZ4SjZAYatD2L7D4NGYNLn4lCkvwJJfwipSb98LubfE_JnBFwXmRTkhFjOabN9sq8yZlkc_80AFtyIYrSrN21m536QcLg25BpulJAlyQ_USvAsoKPMYjBIowfVJEsdo2M-bFQcwvLPLLwGMaxIe0y8nteBRPaqwVuOfQ-Zxrq_dbjJlp4TgOR3pBThbP0xW9L1YtdMRUfcEfKf2U3Y7-JeDrICJSgnoArmmZdodjR-cUIciUgeKkVqJtHzB4NoHkE_vMPCerLWi2eijZC7oYu6H3To4gXzSNJB_JAQSzeFHL0hL56jLWu68fIew_q-Y1Uaca_kWINOBoSBJ4IQ6ng8H-NqyQLXNsGM3Q45DCry54YVEB-pnIaRTgUkn2HOeroBRaz5qBy5nkp0wiOb-yat8qTm7wb6Bh_YA-YIyZCdV2y2vYMq6g6x8HvC0LmmgV3onYVo9IIo5L1daqDqhmXUy-p-1BD_pSconfIT3eL8hrl64pONcZ5SmyNMfDsXgNP8okWuYboMtBb5dW-YW2O68ysYEl4HyFFOKPpPtAVT7bUQUnP9aTD9bKvZnmCXgwtlhWjDfpKG6dv-quZ_0zKQKhgmSbOMqm02Id_AdiaQcrRbwaZWeTxEYTCcYFXeWAzMJcCXaxskzL7HW-FetvY
+MA_URL=https://middle-aggregator.boxberry.ru/v1/
+LKP_API_URL=https://lk.boxberry.ru/lap.json/
+LKP_API_STANDARD_TOKEN=gdlzOq
+
+BILLING_URL=https://billing.boxberry.ru/rest/deliverycostarray/
+BILLING_CLIENT_ID = "BBR4055630"
+
+POCHTA_API_URL=https://tariff.pochta.ru/v2/calculate/tariff/delivery?json&object=
+
+BOXBERRY_BILLING_URL=https://billing.boxberry.ru/rest/deliverycostarray/
+BOXBERRY_BILLING_CLIENT_ID=BBR4055630
+
+DPD_API_URL_GEO=http://ws.dpd.ru/services/geography2?wsdl
+DPD_API_URL_CALC=http://ws.dpd.ru/services/calculator2?wsdl
+DPD_CLIENT_NUMBER=1200001889
+DPD_CLIENT_KEY=72EDFEB9D2C7A4EC05F36D92074215719A066308
+
+
+YANDEX_MAPS_API_KEY=d2ef8134-2f26-45ad-b285-4233107f8820
+
+FIVE_POST_API_URL=https://fivepost.ru/api/public/
+
+SBERLOGISTIC_CALC_URL_IM=https://api.shiptor.ru/public/v1
+SBERLOGISTIC_CALC_URL_PIP=https://sberlogistics.ru/api
+SBERLOGISTIC_GET_POINT_URL=https://checkout.shiptor.ru/api
+
+CDEK_BOX_URL=https://www.cdek.ru/ru/cabinet/api/estimateV2
+CDEK_BOX_COST_URL=https://www.cdek.ru/ru/cabinet/api/getTariffInfo
+CDEK_URL_FOR_CITY_UUID=https://www.cdek.ru/ru/cabinet/api/cities
+
+S3_BUCKET=zone-avito
+S3_SERVICE_NAME=s3
+S3_URL=https://storage.yandexcloud.net/
+S3_REGION=ru-central1
+S3_ACCESS_KEY=ct2OoO_g5kQ1znsRtKc_
+S3_SECRET_ACCESS_KEY=HBaZviDQyK7RwqIkOMXD20-6F74UvX8dAB59FQr0
+AWS_QUEUE_URL=https://message-queue.api.cloud.yandex.net
+YANDEX_ACCESS_KEY=YCAJEWcRSOQqhqiCaGunNFHw3
+YANDEX_SECRET_KEY=YCMWpG1Ld1PqXwP_Rvhma41oErCMpNZAvBwa2827
+PRICES_QUEUE=https://message-queue.api.cloud.yandex.net/b1gvnk36qb4cth9kiice/dj600000000b6tj501vh/prices

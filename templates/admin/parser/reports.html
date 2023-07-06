@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="row"><button type="submit" class="btn btn-success">Обновить</button></div>
+        </form>
+
+      <div class="row">
+        {% for report in reports %}
+
+        <div class="card text-center col-3 m-1" style="	border-radius: 15px; box-shadow: 0px 10px 30px -4px rgb(0 0 0 / 45%); padding:0;">
+          <div class="card-header" style="border-radius: 15px 15px 0px 0px;">
+          {{ report_name }}
+          </div>
+          <div class="card-body">
+            <div><h5 class="card-title" style="margin:20px"> {{ report.month }}</h5></div>
+<!--            <p class="card-text">Тут будет какая-нить общая информация о отчете.</p>-->
+            <div><a href="https://storage.yandexcloud.net/zone-avito/{{report.key}}" class="btn btn-primary">Скачать</a></div>
+          </div>
+          <div class="card-footer text-muted" style="border-radius: 0px 0px 15px 15px">
+            дата обновления: <br> {{ report.date }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+{% endblock %}

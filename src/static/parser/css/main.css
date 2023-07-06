@@ -1,0 +1,42 @@
+.btn {
+    padding: 5px 16px 5px 16px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.btn-success {
+    background-color: #A6CE39;
+    border-color: #A6CE39;
+}
+
+.btn-success:hover {
+    background-color: #79a821;
+    border-color: #79a821;
+}
+
+.btn-info {
+    background-color: #20EAE4;
+    border-color: #20EAE4;
+}
+
+.btn-primary {
+    background-color: #ED1651;
+    border-color: #ED1651;
+}
+
+.btn-primary:hover {
+    background-color: #ff3f34;
+    border-color: #ff3f34;
+}
+
+.btn-danger {
+    background-color: #ED1651;
+    border-color: #ED1651;
+}
+
+.input-group-sm>.form-control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
