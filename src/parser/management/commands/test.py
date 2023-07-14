@@ -40,8 +40,8 @@ class Command(BaseCommand):
         #         c.cdek_uuid = city['city_uuid']
         #         c.save()
         #         print(c.name)
-        route = Route.objects.filter(sender_city__name='Новый Уренгой', receiver_city__name='Хабаровск').first()
-        DeliveryTariff.objects.get(id=96).update_tariffs(route=route)
+        # route = Route.objects.filter(sender_city__name='Новый Уренгой', receiver_city__name='Хабаровск').first()
+        DeliveryTariff.objects.get(id=107).update_tariffs()
         # for delay_min, i in enumerate(DeliveryTariff.objects.all()):
         #     print(i, i.direction)
         #     i.update_tariffs()

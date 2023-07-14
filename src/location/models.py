@@ -21,7 +21,7 @@ class City(models.Model):
     country_code = models.CharField('Код страны', default=643, max_length=5)
 
     def __str__(self):
-        return str(self.name)
+        return f'{str(self.name)} ({self.region})'
 
     class Meta:
         verbose_name = 'Город'

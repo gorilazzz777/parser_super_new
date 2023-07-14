@@ -61,21 +61,20 @@ class CdekBox:
         if response:
             response = response['data']
             if response:
-                price = response[0]['minPrice']
+                price = 100000
                 s = reversed(response[0]['tariffs'])
                 for cdek_tariff in s:
-                    if cdek_tariff['price'] == price:
-                        result[cdek_tariff['ec4Id']] = {
+                    if cdek_tariff['serviceId'] != '3e0900c7-18f1-4128-9d85-545143235849' and cdek_tariff['price'] < price:
+                        price = cdek_tariff['price']
+                        result = {
                                 'max_day': cdek_tariff['durationMax'],
                                 'min_day': cdek_tariff['durationMin'],
                                 'service_id': cdek_tariff['serviceId'],
                             }
-            keylist = list(result.keys())
-            keylist.sort()
             return {
-                'max_day': result[keylist[0]]['max_day'],
-                'min_day': result[keylist[0]]['min_day'],
-            }, result[keylist[0]]['service_id']
+                'max_day': result['max_day'],
+                'min_day': result['min_day'],
+            }, result['service_id']
 
     def get_cost(self, data):
         response = request_func(method='POST', url=self.url_for_cost, json=data, headers={

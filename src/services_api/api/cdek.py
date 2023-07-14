@@ -74,6 +74,7 @@ class Cdek:
             if response:
                 if response.get('total_sum'):
                     try:
+                        print(f'{tariff} - {route} - {package.weight} - {response["total_sum"]}')
                         return {
                             'max_day': response['period_max'],
                             'min_day': response['period_min'],
@@ -82,4 +83,5 @@ class Cdek:
                     except:
                         logger.error(f'Error calc CDEK. Error - {traceback.format_exc()} \n')
                 return {}
+            print(f'{tariff} - {route} - {package.weight} - нет цены')
         return {}
