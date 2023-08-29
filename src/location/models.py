@@ -15,9 +15,9 @@ class City(models.Model):
     courier_delivery = models.BooleanField('Курьерская доставка', default=False)
     kladr = models.CharField('Кладр', max_length=55)
     dpd_code = models.CharField('Код ДПД', max_length=55, null=True)
-    bxb_point_code = models.CharField('Код ПВЗ ББ', max_length=55, null=True)
-    cdek_code = models.IntegerField('Код СДЭК', null=True)
-    cdek_uuid = models.UUIDField('UUID СДЭК', null=True)
+    bxb_point_code = models.CharField('Код ПВЗ ББ', max_length=55, null=True, blank=True)
+    cdek_code = models.IntegerField('Код СДЭК', null=True, blank=True)
+    cdek_uuid = models.UUIDField('UUID СДЭК', null=True, blank=True)
     country_code = models.CharField('Код страны', default=643, max_length=5)
 
     def __str__(self):

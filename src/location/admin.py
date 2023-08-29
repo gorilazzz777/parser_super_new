@@ -4,11 +4,20 @@ from django.contrib.admin import TabularInline, SimpleListFilter
 from .models import *
 
 
+class IndexInline(TabularInline):
+    model = Zip
+    extra = 0
+    verbose_name = 'Индекс'
+    verbose_name_plural = 'Индексы'
+
+
 class CityAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'region', 'code', 'kladr', 'dpd_code', 'cdek_code',)
     list_display_links = ('id',)
     search_fields = ('name', 'region', 'code', 'kladr', 'dpd_code', 'cdek_code',)
     list_editable = ('name', 'region', 'code', 'kladr', 'dpd_code', 'cdek_code',)
+
+    inlines = [IndexInline]
 
 
 class ParsingGroupInline(TabularInline):

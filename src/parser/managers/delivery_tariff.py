@@ -36,6 +36,10 @@ class DeliveryTariffManager:
                                                              delivery_data=delivery_data)
                         if self.__check_for_zero_price():
                             break
+            else:
+                print(f'NO parser model - {parser_model} or no packages - {self.packages_for_parse}')
+        else:
+            print('NO SELF PARSING MODEL!')
         return {
                 'tariff': self.name,
                 'direction': self.direction.name,
@@ -55,7 +59,7 @@ class DeliveryTariffManager:
         if route:
             return[route]
         routes_in_groups = Route.manager.get_routes(groups=self.parsing_groups.all())
-        limit = math.ceil(routes_in_groups.count() / (2 * 24))
+        limit = math.ceil(routes_in_groups.count() / (7 * 24))
         routes_no_parsed = routes_in_groups.without_tariff(tariff=self)
         if routes_no_parsed:
             return routes_no_parsed[:limit]

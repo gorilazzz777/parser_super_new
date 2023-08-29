@@ -202,7 +202,9 @@ class ParsingTariffAdmin(ModelAdmin):
 
     @action(description='Обновить цены')
     def update(self, request, qs: QuerySet):
+        print(qs)
         for tariff in qs:
+            print(tariff.route)
             thread = threading.Thread(target=tariff.tariff.update_tariffs, args=(tariff.route, ))
             thread.start()
         self.message_user(request=request,

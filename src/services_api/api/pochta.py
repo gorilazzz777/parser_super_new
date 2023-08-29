@@ -1,3 +1,5 @@
+import traceback
+
 from app.settings import POCHTA_API_URL
 from location.models import Zip
 from services_api.api.LKP import ApiLKP
@@ -46,23 +48,25 @@ class Pochta:
                                 if price > 0 and response['delivery']['max'] == 0:
                                     # logger.error(f'No time in Pochta {response}')
                                     continue
-                                return {
+                                price = {
                                     'max_day': response['delivery']['max'],
                                     'min_day': response['delivery']['min'],
                                     'price': price / 100
                                 }
+                                return price
                         except:
-                            pass
-                            # logger.error(f'Error calc Pochta. Error - {traceback.format_exc()} \n {response}')
-                    if response.get('errors'):
-                        error = response.get('errors')[0]
-                        if str(sender_index.zip) in error['msg']:
-                            sender_index.in_calc = False
-                            sender_index.save()
-                            break
-                        elif str(receiver_index.zip) in error['msg']:
-                            receiver_index.in_calc = False
-                            receiver_index.save()
-                            sender_indexes = Zip.objects.filter(city=route.sender_city, in_calc=True)
-                            break
+                            # pass
+                            print(f'Error calc Pochta. Error - {traceback.format_exc()} \n {response}')
+                    # if response.get('errors'):
+                    #     error = response.get('errors')[0]
+                    #     if str(sender_index.zip) in error['msg']:
+                    #         sender_index.in_calc = False
+                    #         sender_index.save()
+                    #         break
+                    #     elif str(receiver_index.zip) in error['msg']:
+                    #         receiver_index.in_calc = False
+                    #         receiver_index.save()
+                    #         sender_indexes = Zip.objects.filter(city=route.sender_city, in_calc=True)
+                    #         break
+        print('нет ценн!')
         return {}

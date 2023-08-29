@@ -48,7 +48,6 @@ class Cdek:
         if route.sender_city.cdek_code and route.receiver_city.cdek_code:
             data = {
                 "type": "1",
-                "date": "2023-07-03T11:49:32+0700",
                 "currency": "1",
                 "tariff_code": str(tariff.code.code),
                 "from_location": {
@@ -70,7 +69,15 @@ class Cdek:
                 data['packages'][0]['length'] = package.depth
                 data['packages'][0]['width'] = package.width
                 data['packages'][0]['height'] = package.height
-            response = request_func(method='POST', url=self.url, json=data, timeout=15, headers=self.heareds, need_400=True)
+            response = None
+            for _ in range(2):
+                response = request_func(method='POST', url=self.url, json=data, timeout=15, headers=self.heareds, need_400=True)
+                if response:
+                    break
+                self.heareds = {
+                    'Authorization': f'Bearer {self.get_token()}',
+                    'Content-Type': 'application/json'
+                }
             if response:
                 if response.get('total_sum'):
                     try:
