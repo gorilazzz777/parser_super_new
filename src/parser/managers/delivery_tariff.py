@@ -1,12 +1,8 @@
-import json
 import logging
 import math
-import traceback
 
 from django.utils import timezone
-
 from location.models import Route, Package
-from parser.helpers import query_debugger
 from parser.parsers.parser import Parser
 from services_api.api.s3_client import S3Client
 from tariff_guide.models import ParsingTariff, Price, DeliveryTime
